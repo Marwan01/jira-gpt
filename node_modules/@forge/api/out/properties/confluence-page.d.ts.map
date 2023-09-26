@@ -1,0 +1,1 @@
+{"version":3,"file":"confluence-page.d.ts","sourceRoot":"","sources":["../../src/properties/confluence-page.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,oBAAoB,EAAE,MAAM,UAAU,CAAC;AAEhD,OAAO,EAAE,0BAA0B,EAAE,MAAM,gCAAgC,CAAC;AAE5E,qBAAa,qBAAsB,SAAQ,0BAA0B;gBACvD,MAAM,EAAE,MAAM,EAAE,SAAS,EAAE,oBAAoB;IAMrD,GAAG,CAAC,GAAG,EAAE,MAAM,EAAE,KAAK,EAAE,GAAG,GAAG,OAAO,CAAC,IAAI,CAAC;CAGlD"}

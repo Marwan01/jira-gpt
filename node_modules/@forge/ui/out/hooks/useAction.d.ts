@@ -1,0 +1,2 @@
+export declare const useAction: <V, P>(actionValueUpdater: ((previousValue: V, payload: P) => Promise<V>) | ((previousValue: V, payload: P) => V), initialValue: V | (() => Promise<V>) | (() => V)) => [V, (payload?: P | undefined) => void];
+//# sourceMappingURL=useAction.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"jira-project.d.ts","sourceRoot":"","sources":["../../src/properties/jira-project.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,oBAAoB,EAAE,MAAM,0BAA0B,CAAC;AAChE,OAAO,EAAE,oBAAoB,EAAE,MAAM,UAAU,CAAC;AAGhD,qBAAa,kBAAmB,SAAQ,oBAAoB;gBAC9C,UAAU,EAAE,MAAM,EAAE,SAAS,EAAE,oBAAoB;CAKhE"}
