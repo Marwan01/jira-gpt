@@ -2,7 +2,7 @@ modules:
   jira:issuePanel:
     - key: openforge-hello-world-panel
       function: main
-      title: openforge
+      title: Forge app for codegeist
       icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
   function:
     - key: main
