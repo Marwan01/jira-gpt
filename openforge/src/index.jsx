@@ -1,10 +1,10 @@
 import api, { route } from "@forge/api";
-import ForgeUI, { render, Fragment, Text, IssuePanel, useProductContext, useState } from "@forge/ui";
+import ForgeUI, { render, Fragment, Text,IssuePanel, useProductContext, useState }from "@forge/ui";
 
-const fetchCommentsForIssue = async (issueIdOrKey) => {
+const fetchCommentsForIssue = async (issueId)=> {
   const res = await api
     .asUser()
-    .requestJira(route`/rest/api/3/issue/${issueIdOrKey}/comment`);
+    .requestJira(route`/rest/api/3/issue/${issueId}/comment`);
 
   const data = await res.json();
   return data.comments;
@@ -19,7 +19,10 @@ const App = () => {
   return (
     <Fragment>
       <Text>Hello world!</Text>
-    </Fragment>
+      <Text>
+        Number of comments on this issue: {comments.length}
+      </Text>
+  </Fragment>
   );
 };
 
