@@ -1,4 +1,7 @@
-# Forge Hello World
+# Forge GPT Extra details
+
+Demo:
+<img width="1437" alt="Screenshot 2023-09-27 at 12 57 06 AM" src="https://github.com/Marwan01/codegeist/assets/25825598/44325d99-e639-4b34-ac86-b164fd89311e">
 
 This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira issue panel. 
 
