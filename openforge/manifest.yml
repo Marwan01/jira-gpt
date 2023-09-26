@@ -1,0 +1,11 @@
+modules:
+  jira:issuePanel:
+    - key: openforge-hello-world-panel
+      function: main
+      title: openforge
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/38101405-2e7f-4aca-99bb-5203c3d40f48
