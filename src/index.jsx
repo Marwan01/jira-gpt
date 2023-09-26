@@ -1,28 +1,30 @@
-import api, { route } from "@forge/api";
-import ForgeUI, { render, Fragment, Text,IssuePanel, useProductContext, useState }from "@forge/ui";
-
-const fetchCommentsForIssue = async (issueId)=> {
-  const res = await api
-    .asUser()
-    .requestJira(route`/rest/api/3/issue/${issueId}/comment`);
-
-  const data = await res.json();
-  return data.comments;
-};
+import ForgeUI, {
+  render,
+  Fragment,
+  Text,
+  IssuePanel,
+  useProductContext,
+  useState,
+} from "@forge/ui";
+import { getComments } from "./api/getComments";
+import { callGpt } from "./api/gpt";
 
 const App = () => {
   const context = useProductContext();
-  const [comments] = useState(async () => await fetchCommentsForIssue(context.platformContext.issueKey));
+  const issueKey = context.platformContext.issueKey;
 
-  console.log(`Number of comments on this issue: ${comments.length}`);
+  const [comments] = useState(async () => {
+    return await getComments(issueKey);
+  });
+
+  const [details] = useState(async () => {
+    return await callGpt(comments);
+  });
 
   return (
     <Fragment>
-      <Text>Hello world!</Text>
-      <Text>
-        Number of comments on this issue: {comments.length}
-      </Text>
-  </Fragment>
+      <Text>{details}</Text>
+    </Fragment>
   );
 };
 
