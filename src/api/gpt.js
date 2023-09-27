@@ -4,19 +4,19 @@ const messages = [
   {
     role: "system",
     content:
-      "You are a bot that helps to expand on the existing content of the Jira story to give more insight for the user",
+      "You are a bot that helps to expand on the existing content of the Jira story to give more insight for the user. You will be given a concatenated string of the content of the description and comments, and you need to provide a declarative response that contains a detailed description along with a criteria of acceptance",
   },
 ];
 export const callGpt = async (prompt) => {
   const url = `https://api.openai.com/v1/chat/completions`;
-  messages.push([
+  messages.push(
     {
       role: "user",
       content: prompt,
     },
-  ]);
+  );
   const payload = {
-    model: "gpt-3.5-turbo-instruct-0914",
+    model: "gpt-3.5-turbo",
     n: 1,
     messages: messages,
   };

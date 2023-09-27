@@ -1,0 +1,20 @@
+import api, { route } from "@forge/api";
+
+export const getIssueDescription = async (issueKey) => {
+  // API call to get the description of a Jira issue with key 'issueKey'
+  const issueData = await api
+    .asApp()
+    .requestJira(route`/rest/api/2/issue/${issueKey}`, {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+  const responseData = await issueData.json();
+  // Check if the issue has a description
+  if (responseData.fields && responseData.fields.description) {
+    return responseData.fields.description;
+  } else {
+    return "Description not found for this issue.";
+  }
+};

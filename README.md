@@ -15,6 +15,13 @@ See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/)
 
 - Modify your app by editing the `src/index.jsx` file.
 
+
+Set OpenAI API key as environment variable. An OpenAI API key which you can obtain from OpenAI website. You can find your Secret API key in your User settings. Please make sure you have enough credit balance to make these OpenAI API calls:
+
+```
+forge variables set --encrypt OPEN_API_KEY your-key
+```
+
 - Build and deploy your app by running:
 ```
 forge deploy
