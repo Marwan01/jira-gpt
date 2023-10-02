@@ -1,4 +1,7 @@
 # Forge GPT Extra details
+Devpost: 
+
+https://devpost.com/software/jira-descriptor
 
 Demo:
 <img width="1437" alt="Screenshot 2023-09-27 at 12 57 06 AM" src="https://github.com/Marwan01/codegeist/assets/25825598/44325d99-e639-4b34-ac86-b164fd89311e">
